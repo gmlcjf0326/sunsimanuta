@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>성심당 × 아누타 협업 제안서</title>
+		<!-- 나눔고딕 폰트 -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+			rel="stylesheet" />
+		<style>
+			:root {
+				--rose-50: #fff1f2;
+				--rose-100: #ffe4e6;
+				--rose-500: #f43f5e;
+				--rose-600: #e11d48;
+				--rose-700: #be123c;
+				--teal-50: #f0fdfa;
+				--teal-100: #ccfbf1;
+				--teal-500: #14b8a6;
+				--teal-600: #0d9488;
+				--amber-50: #fffbeb;
+				--amber-100: #fef3c7;
+				--amber-500: #f59e0b;
+				--amber-600: #d97706;
+				--purple-50: #faf5ff;
+				--purple-100: #f3e8ff;
+				--purple-500: #a855f7;
+				--purple-600: #9333ea;
+				--blue-50: #eff6ff;
+				--blue-100: #dbeafe;
+				--blue-500: #3b82f6;
+				--blue-600: #2563eb;
+				--gray-50: #f9fafb;
+				--gray-100: #f3f4f6;
+				--gray-200: #e5e7eb;
+				--gray-300: #d1d5db;
+				--gray-400: #9ca3af;
+				--gray-500: #6b7280;
+				--gray-600: #4b5563;
+				--gray-700: #374151;
+				--gray-800: #1f2937;
+				--gray-900: #111827;
+				--white: #ffffff;
+				--primary: var(--rose-600);
+				--primary-light: var(--rose-100);
+				--secondary: var(--teal-600);
+				--secondary-light: var(--teal-100);
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Nanum Gothic", sans-serif;
+				color: var(--gray-800);
+				line-height: 1.6;
+				background-color: var(--gray-50);
+				overflow-x: hidden;
+			}
+
+			.container {
+				width: 100%;
+				max-width: 1500px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: var(--white);
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				z-index: 50;
+			}
+
+			.header-content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 12px 0;
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+			}
+
+			.logo-circle {
+				width: 40px;
+				height: 40px;
+				background-color: var(--rose-600);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 10px;
+			}
+
+			.logo-text {
+				color: var(--white);
+				font-weight: 700;
+			}
+
+			.logo-title {
+				font-size: 1.25rem;
+				font-weight: 700;
+			}
+
+			.nav-desktop {
+				display: none;
+			}
+
+			@media (min-width: 768px) {
+				.nav-desktop {
+					display: flex;
+					gap: 32px;
+				}
+			}
+
+			.nav-item {
+				font-size: 0.875rem;
+				font-weight: 500;
+				color: var(--gray-600);
+				text-decoration: none;
+				transition: color 0.3s;
+				cursor: pointer;
+			}
+
+			.nav-item:hover {
+				color: var(--primary);
+			}
+
+			.nav-item.active {
+				color: var(--primary);
+			}
+
+			.mobile-menu-btn {
+				display: flex;
+				align-items: center;
+				background: none;
+				border: none;
+				color: var(--gray-600);
+				font-size: 1.5rem;
+				cursor: pointer;
+			}
+
+			@media (min-width: 768px) {
+				.mobile-menu-btn {
+					display: none;
+				}
+			}
+
+			.mobile-menu {
+				display: none;
+				background-color: var(--white);
+				border-top: 1px solid var(--gray-200);
+			}
+
+			.mobile-menu.open {
+				display: block;
+			}
+
+			.mobile-menu-container {
+				display: flex;
+				flex-direction: column;
+				padding: 12px 0;
+			}
+
+			.mobile-menu-item {
+				padding: 10px 16px;
+				text-align: left;
+				border-radius: 4px;
+				margin-bottom: 6px;
+				color: var(--gray-600);
+				background: none;
+				border: none;
+				font-size: 0.9rem;
+				font-weight: 500;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.mobile-menu-item.active {
+				background-color: var(--rose-100);
+				color: var(--rose-600);
+			}
+
+			/* Hero Section */
+			.hero {
+				padding-top: 128px;
+				padding-bottom: 80px;
+				background: linear-gradient(to right, var(--rose-50), var(--teal-50));
+			}
+
+			.hero-content {
+				max-width: 800px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: 4px 12px;
+				border-radius: 9999px;
+				background-color: var(--rose-100);
+				color: var(--rose-700);
+				font-size: 0.875rem;
+				font-weight: 500;
+				margin-bottom: 24px;
+			}
+
+			.hero-title {
+				font-size: 2.5rem;
+				font-weight: 800;
+				margin-bottom: 24px;
+				background: linear-gradient(to right, var(--rose-600), var(--teal-600));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				line-height: 1.2;
+			}
+
+			@media (min-width: 768px) {
+				.hero-title {
+					font-size: 3rem;
+				}
+			}
+
+			.hero-subtitle {
+				font-size: 1.125rem;
+				color: var(--gray-600);
+				margin-bottom: 32px;
+			}
+
+			.button-group {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				justify-content: center;
+			}
+
+			@media (min-width: 768px) {
+				.button-group {
+					flex-direction: row;
+				}
+			}
+
+			.btn {
+				padding: 12px 24px;
+				border-radius: 9999px;
+				font-weight: 500;
+				text-decoration: none;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.btn-primary {
+				background-color: var(--primary);
+				color: var(--white);
+				border: none;
+			}
+
+			.btn-primary:hover {
+				background-color: var(--rose-700);
+			}
+
+			.btn-secondary {
+				background-color: var(--white);
+				color: var(--primary);
+				border: 1px solid var(--rose-200);
+			}
+
+			.btn-secondary:hover {
+				background-color: var(--rose-50);
+			}
+
+			.btn-icon {
+				margin-left: 8px;
+			}
+
+			/* Section common styles */
+			section {
+				padding: 80px 0;
+			}
+
+			section:nth-child(even) {
+				background-color: var(--white);
+			}
+
+			section:nth-child(odd) {
+				background-color: var(--gray-50);
+			}
+
+			.section-header {
+				max-width: 800px;
+				margin: 0 auto 32px;
+			}
+
+			.section-title-wrapper {
+				display: flex;
+				align-items: center;
+				margin-bottom: 32px;
+			}
+
+			.section-icon {
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 16px;
+			}
+
+			.section-icon i {
+				font-size: 1.5rem;
+			}
+
+			.section-title {
+				font-size: 1.875rem;
+				font-weight: 700;
+			}
+
+			.section-content {
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+
+			.card {
+				background-color: var(--white);
+				border-radius: 16px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				padding: 32px;
+				margin-bottom: 32px;
+				transition: all 0.3s;
+			}
+
+			.card:hover {
+				box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+				transform: translateY(-5px);
+			}
+
+			.card-title {
+				font-size: 1.25rem;
+				font-weight: 700;
+				margin-bottom: 16px;
+				color: var(--gray-800);
+			}
+
+			.card-highlight {
+				background-color: var(--rose-50);
+				border-radius: 12px;
+				padding: 24px;
+				margin-bottom: 24px;
+			}
+
+			.text-highlight {
+				font-size: 1.125rem;
+				font-weight: 500;
+				color: var(--rose-800);
+			}
+
+			.text-sub-highlight {
+				color: var(--rose-700);
+				font-weight: 700;
+				margin-top: 8px;
+			}
+
+			.grid {
+				display: grid;
+				gap: 32px;
+			}
+
+			.grid-1-col {
+				grid-template-columns: 1fr;
+			}
+
+			@media (min-width: 768px) {
+				.grid-2-col {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
+			.feature-list {
+				list-style: none;
+			}
+
+			.feature-item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 12px;
+			}
+
+			.feature-marker {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 4px;
+				margin-right: 12px;
+				flex-shrink: 0;
+			}
+
+			.feature-marker-inner {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+			}
+
+			.border-top-rose {
+				border-top: 4px solid var(--rose-500);
+			}
+
+			.border-top-teal {
+				border-top: 4px solid var(--teal-500);
+			}
+
+			.border-top-amber {
+				border-top: 4px solid var(--amber-500);
+			}
+
+			.border-top-purple {
+				border-top: 4px solid var(--purple-500);
+			}
+
+			.border-top-blue {
+				border-top: 4px solid var(--blue-500);
+			}
+
+			/* Colors for different sections */
+			.bg-rose-100 {
+				background-color: var(--rose-100);
+			}
+
+			.bg-teal-100 {
+				background-color: var(--teal-100);
+			}
+
+			.bg-amber-100 {
+				background-color: var(--amber-100);
+			}
+
+			.bg-purple-100 {
+				background-color: var(--purple-100);
+			}
+
+			.bg-blue-100 {
+				background-color: var(--blue-100);
+			}
+
+			.bg-rose-600 {
+				background-color: var(--rose-600);
+			}
+
+			.bg-teal-600 {
+				background-color: var(--teal-600);
+			}
+
+			.bg-amber-600 {
+				background-color: var(--amber-600);
+			}
+
+			.bg-purple-600 {
+				background-color: var(--purple-600);
+			}
+
+			.text-rose-600 {
+				color: var(--rose-600);
+			}
+
+			.text-teal-600 {
+				color: var(--teal-600);
+			}
+
+			.text-amber-600 {
+				color: var(--amber-600);
+			}
+
+			.text-purple-600 {
+				color: var(--purple-600);
+			}
+
+			.text-blue-600 {
+				color: var(--blue-600);
+			}
+
+			.text-white {
+				color: var(--white);
+			}
+
+			/* Timeline styles */
+			.timeline {
+				position: relative;
+				margin: 48px 0;
+			}
+
+			.timeline::before {
+				content: "";
+				position: absolute;
+				left: 20px;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background-color: var(--gray-200);
+			}
+
+			@media (min-width: 768px) {
+				.timeline::before {
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+
+			.timeline-item {
+				position: relative;
+				margin-bottom: 48px;
+				padding-left: 48px;
+			}
+
+			@media (min-width: 768px) {
+				.timeline-item {
+					width: 50%;
+					padding-left: 0;
+				}
+
+				.timeline-item:nth-child(odd) {
+					padding-right: 48px;
+					text-align: right;
+					margin-left: 0;
+					margin-right: auto;
+				}
+
+				.timeline-item:nth-child(even) {
+					padding-left: 48px;
+					text-align: left;
+					margin-left: auto;
+					margin-right: 0;
+				}
+			}
+
+			.timeline-badge {
+				display: inline-block;
+				padding: 8px 16px;
+				border-radius: 8px;
+				color: var(--white);
+				font-weight: 700;
+				margin-bottom: 12px;
+			}
+
+			.timeline-title {
+				font-size: 1.25rem;
+				font-weight: 700;
+				margin-bottom: 8px;
+			}
+
+			.timeline-text {
+				color: var(--gray-600);
+				margin-bottom: 16px;
+			}
+
+			.timeline-quote {
+				background-color: var(--gray-100);
+				padding: 12px;
+				border-radius: 8px;
+				margin-top: 8px;
+			}
+
+			.timeline-quote-text {
+				font-weight: 500;
+				color: var(--gray-700);
+			}
+
+			.timeline-dot {
+				position: absolute;
+				left: 12px;
+				top: 16px;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: var(--white);
+				border: 4px solid;
+				z-index: 1;
+			}
+
+			@media (min-width: 768px) {
+				.timeline-item:nth-child(odd) .timeline-dot {
+					right: -8px;
+					left: auto;
+				}
+
+				.timeline-item:nth-child(even) .timeline-dot {
+					left: -8px;
+				}
+			}
+
+			.timeline-content {
+				background-color: var(--white);
+				border-radius: 12px;
+				padding: 24px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+			}
+
+			.timeline-sub {
+				margin-top: 16px;
+				padding: 16px;
+				border-radius: 12px;
+			}
+
+			@media (min-width: 768px) {
+				.timeline-item:nth-child(odd) .timeline-sub {
+					margin-right: -36px;
+				}
+
+				.timeline-item:nth-child(even) .timeline-sub {
+					margin-left: -36px;
+				}
+			}
+
+			/* Benefits Section */
+			.benefit-icon {
+				width: 56px;
+				height: 56px;
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 24px;
+			}
+
+			.benefit-icon i {
+				font-size: 1.75rem;
+			}
+
+			/* Roadmap Section */
+			.roadmap-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 16px;
+				margin-bottom: 64px;
+			}
+
+			@media (min-width: 768px) {
+				.roadmap-grid {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+
+			.roadmap-card {
+				background-color: var(--white);
+				border-radius: 16px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				padding: 24px;
+				transition: all 0.3s;
+			}
+
+			.roadmap-card:hover {
+				box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+			}
+
+			.roadmap-month {
+				font-size: 1.125rem;
+				font-weight: 700;
+				margin-bottom: 12px;
+			}
+
+			.roadmap-list {
+				list-style: none;
+			}
+
+			.roadmap-item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 8px;
+			}
+
+			.roadmap-marker {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 4px;
+				margin-right: 8px;
+				flex-shrink: 0;
+			}
+
+			.roadmap-marker-inner {
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+			}
+
+			.roadmap-text {
+				font-size: 0.875rem;
+			}
+
+			/* Conclusion Section */
+			.conclusion {
+				text-align: center;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			.conclusion-text {
+				font-size: 1.125rem;
+				margin-bottom: 32px;
+			}
+
+			.slogan {
+				font-size: 1.5rem;
+				font-weight: 700;
+				margin-bottom: 32px;
+				background: linear-gradient(to right, var(--rose-600), var(--teal-600));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.company-info {
+				margin-top: 64px;
+				padding-top: 24px;
+				border-top: 1px solid var(--gray-200);
+				color: var(--gray-600);
+				font-size: 0.875rem;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="header-content">
+					<div class="logo">
+						<div class="logo-circle">
+							<span class="logo-text">S×A</span>
+						</div>
+						<h1 class="logo-title">성심당 × 아누타 협업 제안서</h1>
+					</div>
+
+					<nav class="nav-desktop">
+						<a
+							href="#overview"
+							class="nav-item active"
+							>프로젝트 개요</a
+						>
+						<a
+							href="#synergy"
+							class="nav-item"
+							>시너지</a
+						>
+						<a
+							href="#concept"
+							class="nav-item"
+							>운영 컨셉</a
+						>
+						<a
+							href="#benefits"
+							class="nav-item"
+							>기대 효과</a
+						>
+						<a
+							href="#roadmap"
+							class="nav-item"
+							>로드맵</a
+						>
+						<a
+							href="#conclusion"
+							class="nav-item"
+							>결론</a
+						>
+					</nav>
+
+					<button
+						class="mobile-menu-btn"
+						id="mobileMenuBtn">
+						<i class="fas fa-bars"></i>
+					</button>
+				</div>
+
+				<!-- Mobile Menu -->
+				<div
+					class="mobile-menu"
+					id="mobileMenu">
+					<div class="container mobile-menu-container">
+						<button
+							class="mobile-menu-item active"
+							data-section="overview">
+							프로젝트 개요
+						</button>
+						<button
+							class="mobile-menu-item"
+							data-section="synergy">
+							시너지
+						</button>
+						<button
+							class="mobile-menu-item"
+							data-section="concept">
+							운영 컨셉
+						</button>
+						<button
+							class="mobile-menu-item"
+							data-section="benefits">
+							기대 효과
+						</button>
+						<button
+							class="mobile-menu-item"
+							data-section="roadmap">
+							로드맵
+						</button>
+						<button
+							class="mobile-menu-item"
+							data-section="conclusion">
+							결론
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="badge">혁신적 협업 제안</div>
+					<h1 class="hero-title">
+						성심당 × 아누타, <br />축제를 빛낼 혁신적인 협업 팝업스토어
+					</h1>
+					<p class="hero-subtitle">
+						성심당의 브랜드 가치와 아누타의 AI 기술,<br />
+						장애인 크리에이터의 창의력이 만나 특별한 축제 경험을 선사합니다.
+					</p>
+					<div class="button-group">
+						<a
+							href="#"
+							class="btn btn-primary">
+							<span>제안서 살펴보기</span>
+							<i class="fas fa-arrow-right btn-icon"></i>
+						</a>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Project Overview -->
+		<section id="overview">
+			<div class="container">
+				<div class="section-content">
+					<div class="section-title-wrapper">
+						<div class="section-icon bg-rose-100">
+							<i class="far fa-calendar-alt text-rose-600"></i>
+						</div>
+						<h2 class="section-title">프로젝트 개요</h2>
+					</div>
+
+					<div class="card">
+						<h3 class="card-title">프로젝트명</h3>
+						<div class="card-highlight">
+							<p class="text-highlight">
+								"성심당과 AI 창작이 만나 새로운 빵과 작품을 창조하다"
+							</p>
+							<p class="text-sub-highlight">성심당 × 아누타 팝업스토어</p>
+						</div>
+
+						<div class="grid grid-2-col">
+							<div>
+								<h3 class="card-title">기간 및 장소</h3>
+								<ul class="feature-list">
+									<li class="feature-item">
+										<div class="feature-marker bg-rose-100">
+											<div class="feature-marker-inner bg-rose-600"></div>
+										</div>
+										<p>8월 대전 ○시 축제 기간 중</p>
+									</li>
+									<li class="feature-item">
+										<div class="feature-marker bg-rose-100">
+											<div class="feature-marker-inner bg-rose-600"></div>
+										</div>
+										<p>
+											은행동 소재 아누타쇼케이스 건물<br />(지하 1층부터 4층까지
+											전 층 활용)
+										</p>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<h3 class="card-title">핵심 컨셉</h3>
+								<ul class="feature-list">
+									<li class="feature-item">
+										<div class="feature-marker bg-teal-100">
+											<div class="feature-marker-inner bg-teal-600"></div>
+										</div>
+										<p>
+											<strong>성심당 제빵사와 AI의 만남</strong>: 성심당의
+											제빵사와 아누타의 <strong>AI 기술</strong>이 협력하여
+											<span class="text-rose-600">○시 축제</span>에 맞는 새로운
+											빵(기획상품)을 개발
+										</p>
+									</li>
+									<li class="feature-item">
+										<div class="feature-marker bg-teal-100">
+											<div class="feature-marker-inner bg-teal-600"></div>
+										</div>
+										<p>
+											<strong>장애인 크리에이터의 디자인</strong>: 아누타 장애인
+											크리에이터들이 성심당의 새로운 빵과 ○시 축제를 테마로 한
+											다양한 굿즈와 작품을 제작하여 전시
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<ul class="feature-list">
+							<li class="feature-item">
+								<div class="feature-marker bg-teal-100">
+									<div class="feature-marker-inner bg-teal-600"></div>
+								</div>
+								<p>
+									<strong>성심당의 브랜드 역사와 스토리</strong>: 아누타의
+									공간에서 성심당의 브랜드 역사와 사회적 가치를 AI와 장애인
+									창작을 결합한 전시로 소개(팝업 스토어)
+								</p>
+							</li>
+							<li class="feature-item">
+								<div class="feature-marker bg-teal-100">
+									<div class="feature-marker-inner bg-teal-600"></div>
+								</div>
+								<p>
+									<strong>고객 체험</strong>: 성심당의 새로운 빵을 맛보며,
+									아누타의 창의적인 디자인 작품과 굿즈를 경험하는 특별한 체험
+									제공
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Synergy Section -->
+		<section id="synergy">
+			<div class="container">
+				<div class="section-content">
+					<div class="section-title-wrapper">
+						<div class="section-icon bg-teal-100">
+							<i class="fas fa-users text-teal-600"></i>
+						</div>
+						<h2 class="section-title">성심당과 아누타의 시너지</h2>
+					</div>
+
+					<p
+						class="section-description"
+						style="
+							font-size: 1.125rem;
+							color: var(--gray-700);
+							margin-bottom: 32px;
+						">
+						<strong>성심당</strong>과 <strong>아누타</strong>의
+						<strong class="text-rose-600">핵심 가치를 결합</strong>한 이번
+						팝업스토어는,
+						<strong class="text-teal-600">AI 기술과 장애인 창작</strong>의
+						협업을 통해,<br/> <strong>새로운 빵 개발</strong>과
+						<strong>창의적인 굿즈 및 작품</strong>전시라는 차별화된 경험을
+						선보입니다.
+					</p>
+
+					<div class="grid grid-2-col">
+						<!-- Traditional & Innovation -->
+						<div class="card border-top-rose">
+							<div
+								style="display: flex; align-items: center; margin-bottom: 16px">
+								<i
+									class="fas fa-heart text-rose-600 mr-3"
+									style="margin-right: 12px"></i>
+								<h3
+									class="card-title"
+									style="margin-bottom: 0">
+									전통과 혁신의 결합
+								</h3>
+							</div>
+							<ul class="feature-list">
+								<li class="feature-item">
+									<div class="feature-marker bg-rose-100">
+										<div class="feature-marker-inner bg-rose-600"></div>
+									</div>
+									<p>
+										성심당은 <strong>전통적인 빵 맛과 품질</strong>로 대전을
+										대표하는 브랜드입니다.
+									</p>
+								</li>
+								<li class="feature-item">
+									<div class="feature-marker bg-rose-100">
+										<div class="feature-marker-inner bg-rose-600"></div>
+									</div>
+									<p>
+										이번 팝업은 성심당 제빵사의
+										<strong>전통적인 제빵 기술</strong>과 아누타의
+										<strong>AI 기술</strong>이 결합되어,
+										<strong>새로운 빵</strong>을 <strong>○시 축제</strong>의
+										테마에 맞게 창조하는
+										<strong class="text-rose-600">혁신적인 협업</strong>입니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<!-- AI and Creators -->
+						<div class="card border-top-teal">
+							<div
+								style="display: flex; align-items: center; margin-bottom: 16px">
+								<i
+									class="fas fa-palette text-teal-600 mr-3"
+									style="margin-right: 12px"></i>
+								<h3
+									class="card-title"
+									style="margin-bottom: 0">
+									AI와 장애인 창작으로 새로운 가능성
+								</h3>
+							</div>
+							<ul class="feature-list">
+								<li class="feature-item">
+									<div class="feature-marker bg-teal-100">
+										<div class="feature-marker-inner bg-teal-600"></div>
+									</div>
+									<p>
+										아누타의 <strong>AI 기술</strong>은
+										<strong
+											>성심당의 제빵사와 협력하여, <br/>축제에 어울리는 새로운
+											빵</strong
+										>을 개발하는 데 활용됩니다.
+									</p>
+								</li>
+								<li class="feature-item">
+									<div class="feature-marker bg-teal-100">
+										<div class="feature-marker-inner bg-teal-600"></div>
+									</div>
+									<p>
+										아누타의 <strong>장애인 크리에이터</strong>들은
+										<strong>이 새로운 빵</strong>과 <strong>축제 테마</strong>에
+										맞는 <strong>디자인 굿즈</strong>와 <strong>작품</strong>을
+										창작하여 전시하고, 방문객에게
+										<strong>다양한 볼거리를</strong> 제공할 수 있습니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Buzz and Experience -->
+					<div
+						class="card border-top-amber"
+						style="margin-top: 16px">
+						<div
+							style="display: flex; align-items: center; margin-bottom: 16px">
+							<i
+								class="fas fa-comment text-amber-600 mr-3"
+								style="margin-right: 12px"></i>
+							<h3
+								class="card-title"
+								style="margin-bottom: 0">
+								화제성과 고객 경험 극대화
+							</h3>
+						</div>
+						<ul class="feature-list">
+							<li class="feature-item">
+								<div class="feature-marker bg-amber-100">
+									<div class="feature-marker-inner bg-amber-600"></div>
+								</div>
+								<p>
+									<strong>성심당 제빵사와 AI</strong>의 협업과
+									<strong>장애인 크리에이터의 디자인 작품</strong>은 대전 ○시
+									축제에서 <strong class="text-amber-600">큰 화제</strong>를
+									일으킬 것입니다.
+								</p>
+							</li>
+							<li class="feature-item">
+								<div class="feature-marker bg-amber-100">
+									<div class="feature-marker-inner bg-amber-600"></div>
+								</div>
+								<p>
+									축제 방문객들은 <strong>맛, 예술, 혁신</strong>을 동시에
+									경험하며,
+									<strong class="text-amber-600">새로운 경험</strong>을 즐기게
+									될 것입니다.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Floor Concept -->
+		<section id="concept">
+			<div class="container">
+				<div class="section-content">
+					<div class="section-title-wrapper">
+						<div class="section-icon bg-amber-100">
+							<i class="fas fa-building text-amber-600"></i>
+						</div>
+						<h2 class="section-title">아누타 쇼케이스 층별 운영 컨셉</h2>
+					</div>
+
+					<div class="timeline">
+						<!-- B1 Floor -->
+						<div class="timeline-item">
+							<div
+								class="timeline-dot"
+								style="border-color: var(--rose-600)"></div>
+							<div class="timeline-content">
+								<div class="timeline-badge bg-rose-600">지하 1층 (B1)</div>
+								<h3 class="timeline-title">
+									성심당 브랜드 역사 및 ESG 스토리 전시
+								</h3>
+								<p class="timeline-text">
+									성심당의 기원부터 ESG 활동까지, 브랜드의 철학과 역사적인
+									순간을 미디어 아트와 영상 콘텐츠로 전시합니다.
+								</p>
+								<div class="timeline-quote">
+									<p class="timeline-quote-text">
+										"성심당, 대전의 역사를 굽다. <br/>그 안에 담긴 사회적 가치와
+										책임."
+									</p>
+								</div>
+							</div>
+							<div class="timeline-sub bg-rose-100">
+								<p style="font-weight: 800; margin-bottom: 4px">고객 경험</p>
+								<p style="color: var(--gray-600)">
+									방문객은 성심당의 <strong>전통적인 가치</strong>와
+									<strong>사회적 책임</strong>을 체험하며<br/> 브랜드 스토리를 배워갈
+									수 있습니다.
+								</p>
+							</div>
+						</div>
+
+						<!-- 1F Floor -->
+						<div class="timeline-item">
+							<div
+								class="timeline-dot"
+								style="border-color: var(--amber-600)"></div>
+							<div class="timeline-content">
+								<div class="timeline-badge bg-amber-600">1층 (1F)</div>
+								<h3 class="timeline-title">성심당의 굿즈와 아누타의 디자인</h3>
+								<p class="timeline-text">
+									<strong>성심당의 고유한 굿즈</strong>와
+									<strong>아누타 장애인 크리에이터</strong>의 디자인을 결합한
+									<strong>선물샵</strong>
+								</p>
+								<div class="timeline-quote">
+									<p class="timeline-quote-text">
+										"성심당의 맛을 담은 선물, <br/>아누타의 창의력으로 더욱
+										특별하게."
+									</p>
+								</div>
+							</div>
+							<div class="timeline-sub bg-amber-100">
+								<p style="font-weight: 800; margin-bottom: 4px">굿즈 구성</p>
+								<p style="color: var(--gray-600)">
+									성심당의 <strong>대표 빵</strong>을 테마로 한
+									<strong>굿즈</strong> (머그컵, 에코백 등) <br/>+ 아누타 디자이너가
+									디자인한 <strong>포장지, 카드, 소품</strong>
+								</p>
+							</div>
+						</div>
+
+						<!-- 2F Floor -->
+						<div class="timeline-item">
+							<div
+								class="timeline-dot"
+								style="border-color: var(--teal-600)"></div>
+							<div class="timeline-content">
+								<div class="timeline-badge bg-teal-600">2층 (2F)</div>
+								<h3 class="timeline-title">빵 시식 & 커피 존</h3>
+								<p class="timeline-text">
+									성심당의 <strong>대표 빵</strong>과
+									<strong>아누타의 AI 활용 공간</strong>이 결합된 커피와 빵을
+									동시에 즐길 수 있는 휴식 공간
+								</p>
+								<div class="timeline-quote">
+									<p class="timeline-quote-text">
+										"맛있는 빵을 넘어, 성심당 이야기와 <br/>AI의 창의성을 함께
+										즐기세요."
+									</p>
+								</div>
+							</div>
+							<div class="timeline-sub bg-teal-100">
+								<p style="font-weight: 800; margin-bottom: 4px">체험 요소</p>
+								<p style="color: var(--gray-600)">
+									성심당의 빵을 맛보며, <strong>AI와 장애인 디자인</strong>으로
+									꾸며진<br/> <strong>포장지와 굿즈</strong>를 직접 경험
+								</p>
+							</div>
+						</div>
+
+						<!-- 4F Floor -->
+						<div class="timeline-item">
+							<div
+								class="timeline-dot"
+								style="border-color: var(--purple-600)"></div>
+							<div class="timeline-content">
+								<div class="timeline-badge bg-purple-600">4층 (4F)</div>
+								<h3 class="timeline-title">미니 팝업 및 전시·행사 공간</h3>
+								<p class="timeline-text">
+									<strong>성심당 x 아누타 협업</strong>을 테마로 한
+									<strong>미니 전시</strong>와 고객 참여형 프로그램 운영
+								</p>
+								<div class="timeline-quote">
+									<p class="timeline-quote-text">
+										"함께 만들어가는 창의적 공간, 여러분을 기다립니다."
+									</p>
+								</div>
+							</div>
+							<div class="timeline-sub bg-purple-100">
+								<p style="font-weight: 800; margin-bottom: 4px">체험 요소</p>
+								<p style="color: var(--gray-600)">
+									성심당과 아누타의 <strong>협업 워크숍</strong>,
+									<strong>토크쇼</strong>, <strong>작품 전시</strong> 등
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Benefits Section -->
+		<section id="benefits">
+			<div class="container">
+				<div class="section-content">
+					<div class="section-title-wrapper">
+						<div class="section-icon bg-purple-100">
+							<i class="fas fa-chart-line text-purple-600"></i>
+						</div>
+						<h2 class="section-title">기대 효과</h2>
+					</div>
+
+					<div class="grid grid-2-col">
+						<div class="card">
+							<div class="benefit-icon bg-rose-100">
+								<i class="fas fa-building text-rose-600"></i>
+							</div>
+							<h3 class="card-title">브랜드 가치 강화</h3>
+							<ul class="feature-list">
+								<li class="feature-item">
+									<div class="feature-marker bg-rose-100">
+										<div class="feature-marker-inner bg-rose-600"></div>
+									</div>
+									<p>
+										성심당은 "맛의 품격"을 넘어 "혁신적 ESG 기업"으로
+										자리매김하게 됩니다.
+									</p>
+								</li>
+								<li class="feature-item">
+									<div class="feature-marker bg-rose-100">
+										<div class="feature-marker-inner bg-rose-600"></div>
+									</div>
+									<p>
+										아누타는 <strong>AI와 장애인 창작</strong>을 통해
+										<strong>사회적 가치</strong>와 <strong>창의성</strong>을
+										널리 알리는 기회가 될 것입니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<div class="benefit-icon bg-teal-100">
+								<i class="fas fa-coffee text-teal-600"></i>
+							</div>
+							<h3 class="card-title">고객 체험 및 매출 증대</h3>
+							<ul class="feature-list">
+								<li class="feature-item">
+									<div class="feature-marker bg-teal-100">
+										<div class="feature-marker-inner bg-teal-600"></div>
+									</div>
+									<p>
+										전시, 굿즈 판매, 빵 시식 등 다양한 체험을 통해
+										<strong>고객의 체류 시간</strong>과
+										<strong>반복 방문</strong>을 유도할 수 있습니다.
+									</p>
+								</li>
+								<li class="feature-item">
+									<div class="feature-marker bg-teal-100">
+										<div class="feature-marker-inner bg-teal-600"></div>
+									</div>
+									<p>
+										축제 기간 동안 <strong>성심당의 빵과 굿즈</strong> 판매가
+										증가하고, 아누타의 <strong>디자인</strong>이 큰 관심을 끌
+										것입니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<div class="benefit-icon bg-amber-100">
+								<i class="fas fa-comment text-amber-600"></i>
+							</div>
+							<h3 class="card-title">미디어 노출 및 SNS 바이럴 효과</h3>
+							<ul class="feature-list">
+								<li class="feature-item">
+									<div class="feature-marker bg-amber-100">
+										<div class="feature-marker-inner bg-amber-600"></div>
+									</div>
+									<p>
+										"장인이 AI콜라보, 빵 레시피를 만들거나, 행사를 위한 기획된
+										빵을 장애인 디자이너가 포장지 디자인을 하다"는 독창적인 협업
+										스토리는 <strong>언론과 SNS에서 큰 화제</strong>가 될
+										것입니다.
+									</p>
+								</li>
+								<li class="feature-item">
+									<div class="feature-marker bg-amber-100">
+										<div class="feature-marker-inner bg-amber-600"></div>
+									</div>
+									<p>
+										"성심당 빵 + 아누타 디자인"이라는 키워드로
+										<strong>바이럴 마케팅</strong> 효과가 극대화될 것입니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<div class="benefit-icon bg-purple-100">
+								<i class="fas fa-heart text-purple-600"></i>
+							</div>
+							<h3 class="card-title">장애인 창작 및 고용 활성화</h3>
+							<ul class="feature-list">
+								<li class="feature-item">
+									<div class="feature-marker bg-purple-100">
+										<div class="feature-marker-inner bg-purple-600"></div>
+									</div>
+									<p>
+										아누타의 <strong>장애인 크리에이터</strong>들이 만든
+										<strong>디자인 굿즈</strong>와 <strong>포장지</strong>는
+										그들의 <strong>창작 활동</strong>을 더욱 넓히고,
+										<strong>사회적 책임</strong>을 다하는 브랜드로서의 이미지를
+										강화합니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Roadmap Section -->
+		<section id="roadmap">
+			<div class="container">
+				<div class="section-content">
+					<div class="section-title-wrapper">
+						<div class="section-icon bg-blue-100">
+							<i class="far fa-calendar-alt text-blue-600"></i>
+						</div>
+						<h2 class="section-title">실행 로드맵</h2>
+					</div>
+
+					<div class="roadmap-grid">
+						<!-- May-June -->
+						<div class="roadmap-card border-top-blue">
+							<h3 class="roadmap-month text-blue-600">5~6월</h3>
+							<ul class="roadmap-list">
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-blue-100">
+										<div class="roadmap-marker-inner bg-blue-600"></div>
+									</div>
+									<p class="roadmap-text">
+										기획 확정, 제빵사+AI 콜라보, 상품개발
+									</p>
+								</li>
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-blue-100">
+										<div class="roadmap-marker-inner bg-blue-600"></div>
+									</div>
+									<p class="roadmap-text">
+										전시 콘텐츠 및 굿즈 디자인 시안 제작
+									</p>
+								</li>
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-blue-100">
+										<div class="roadmap-marker-inner bg-blue-600"></div>
+									</div>
+									<p class="roadmap-text">
+										성심당과 아누타의 협업 협의 및 전시 디자인 최종 확정
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<!-- July -->
+						<div class="roadmap-card border-top-teal">
+							<h3 class="roadmap-month text-teal-600">7월</h3>
+							<ul class="roadmap-list">
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-teal-100">
+										<div class="roadmap-marker-inner bg-teal-600"></div>
+									</div>
+									<p class="roadmap-text">
+										팝업스토어 공간 구축 및 전시 콘텐츠 설치
+									</p>
+								</li>
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-teal-100">
+										<div class="roadmap-marker-inner bg-teal-600"></div>
+									</div>
+									<p class="roadmap-text">
+										SNS 및 미디어 홍보(티저 영상, 협업 메시지 등)
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<!-- August -->
+						<div class="roadmap-card border-top-rose">
+							<h3 class="roadmap-month text-rose-600">8월</h3>
+							<ul class="roadmap-list">
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-rose-100">
+										<div class="roadmap-marker-inner bg-rose-600"></div>
+									</div>
+									<p class="roadmap-text">
+										대전 ○시 축제와 연계한 팝업스토어 오픈
+									</p>
+								</li>
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-rose-100">
+										<div class="roadmap-marker-inner bg-rose-600"></div>
+									</div>
+									<p class="roadmap-text">홍보 및 운영</p>
+								</li>
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-rose-100">
+										<div class="roadmap-marker-inner bg-rose-600"></div>
+									</div>
+									<p class="roadmap-text">
+										고객 피드백 및 판매 추적 (SNS 해시태그 이벤트 활용)
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<!-- September+ -->
+						<div class="roadmap-card border-top-purple">
+							<h3 class="roadmap-month text-purple-600">9월 이후</h3>
+							<ul class="roadmap-list">
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-purple-100">
+										<div class="roadmap-marker-inner bg-purple-600"></div>
+									</div>
+									<p class="roadmap-text">성과 분석</p>
+								</li>
+								<li class="roadmap-item">
+									<div class="roadmap-marker bg-purple-100">
+										<div class="roadmap-marker-inner bg-purple-600"></div>
+									</div>
+									<p class="roadmap-text">후속 협업 논의 및 향후 전시 확대</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Conclusion -->
+		<section id="conclusion">
+			<div class="container">
+				<div class="section-content">
+					<div class="section-title-wrapper">
+						<div class="section-icon bg-rose-100">
+							<i class="fas fa-bookmark text-rose-600"></i>
+						</div>
+						<h2 class="section-title">결론 및 제안</h2>
+					</div>
+
+					<div class="conclusion">
+						<h3
+							style="font-size: 1.5rem; font-weight: 700; margin-bottom: 20px">
+							"성심당 × 아누타: AI와 장애인 창작의 만남"
+						</h3>
+						<p class="conclusion-text">
+							이번 팝업스토어는 <strong>맛과 혁신, 그리고 사회적 가치</strong>를
+							동시에 전하는 특별한 프로젝트입니다.<br />
+							성심당의 <strong>철학과 맛, 지역의 상징성</strong>에
+							<strong>AI와 장애인 창작</strong>을 결합함으로써,<br />
+							<strong>기술과 예술이 결합된 새로운 브랜드 경험</strong>을
+							고객들에게 제공합니다.
+						</p>
+						<p class="conclusion-text">
+							성심당과 아누타의 협업은
+							<strong>고객에게 감동과 영감을 주는</strong> 새로운 차원의 브랜드
+							경험을 창출하고,<br />
+							<strong>대전의 축제</strong>와 함께 지역 사회와 브랜드에 중요한
+							가치를 더하는 기회가 될 것입니다.
+						</p>
+
+						<div class="slogan">"빵을 통해 더 따뜻한 세상을 만드는 동행"</div>
+
+						<p>
+							이 여정에 성심당과 아누타가 함께하게 되기를 진심으로 기대합니다.
+						</p>
+
+						<div class="company-info">
+							<p>제안(기획): ㈜아누타</p>
+							<p>문의: 010-2682-0671</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			// 모바일 메뉴 토글
+			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+			const mobileMenu = document.getElementById("mobileMenu");
+			const mobileMenuItems = document.querySelectorAll(".mobile-menu-item");
+			const navItems = document.querySelectorAll(".nav-item");
+
+			mobileMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.toggle("open");
+				const isOpen = mobileMenu.classList.contains("open");
+				mobileMenuBtn.innerHTML = isOpen
+					? '<i class="fas fa-times"></i>'
+					: '<i class="fas fa-bars"></i>';
+			});
+
+			// 스크롤 이벤트에 따른 네비게이션 활성화
+			function setActiveNavItem() {
+				const scrollPosition = window.scrollY + 150;
+				const sections = document.querySelectorAll("section[id]");
+
+				sections.forEach((section) => {
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.offsetHeight;
+					const sectionId = section.getAttribute("id");
+
+					if (
+						scrollPosition >= sectionTop &&
+						scrollPosition < sectionTop + sectionHeight
+					) {
+						// 모바일 메뉴 아이템 활성화
+						mobileMenuItems.forEach((item) => {
+							if (item.dataset.section === sectionId) {
+								item.classList.add("active");
+							} else {
+								item.classList.remove("active");
+							}
+						});
+
+						// 데스크톱 메뉴 아이템 활성화
+						navItems.forEach((item) => {
+							if (item.getAttribute("href") === `#${sectionId}`) {
+								item.classList.add("active");
+							} else {
+								item.classList.remove("active");
+							}
+						});
+					}
+				});
+			}
+
+			// 네비게이션 클릭 이벤트
+			function scrollToSection(sectionId) {
+				const element = document.getElementById(sectionId);
+				if (element) {
+					window.scrollTo({
+						top: element.offsetTop - 100,
+						behavior: "smooth",
+					});
+					mobileMenu.classList.remove("open");
+					mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+				}
+			}
+
+			// 모바일 메뉴 아이템 클릭 이벤트
+			mobileMenuItems.forEach((item) => {
+				item.addEventListener("click", () => {
+					const sectionId = item.dataset.section;
+					scrollToSection(sectionId);
+				});
+			});
+
+			// 데스크톱 메뉴 아이템 클릭 이벤트
+			navItems.forEach((item) => {
+				item.addEventListener("click", (e) => {
+					e.preventDefault();
+					const sectionId = item.getAttribute("href").substring(1);
+					scrollToSection(sectionId);
+				});
+			});
+
+			// 스크롤 이벤트 리스너
+			window.addEventListener("scroll", setActiveNavItem);
+
+			// 초기 로드 시 활성화
+			window.addEventListener("load", setActiveNavItem);
+		</script>
+	</body>
+</html>
